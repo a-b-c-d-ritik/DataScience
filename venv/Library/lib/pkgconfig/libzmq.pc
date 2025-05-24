@@ -1,0 +1,12 @@
+prefix=c:/Projects/DataScience/venv/Library
+exec_prefix=c:/Projects/DataScience/venv/Library
+libdir=c:/Projects/DataScience/venv/Library/lib
+includedir=c:/Projects/DataScience/venv/Library/include
+
+Name: libzmq
+Description: 0MQ c++ library
+Version: 4.3.5
+Libs: -L${libdir} -lzmq
+Libs.private: 
+Requires.private: 
+Cflags: -I${includedir} 
