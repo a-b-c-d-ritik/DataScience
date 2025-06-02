@@ -7,3 +7,4 @@ matplotlib
 html5lib
 seaborn
 bs4
+flask
