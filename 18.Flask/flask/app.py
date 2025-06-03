@@ -29,5 +29,30 @@ def mfrom():
         return (f' Hello {name} !!')
     return render_template("form.html")
 
+@app.route("/submit",methods=['GET','POST'])
+def msubmit():
+    if request.method=="POST":
+        name=request.form['name']
+        return (f' Hello {name} !!')
+    return render_template("form.html")
+
+#variable rule
+@app.route("/success/<int:score>")
+def msuccess(score):
+        return (f' Hello {score} !!')
+
+#jinja 2 template engine
+@app.route("/marks/<int:marks>")
+def score(marks):
+    res=""
+    if marks>=45:
+        res="PASS"
+    else:
+        res="FAIL"
+    
+    return render_template("result.html",result=res)
+    
+
+
 if __name__=="__main__":
     app.run(debug=True)
